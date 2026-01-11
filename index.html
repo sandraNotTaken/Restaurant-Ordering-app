@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Restaurant Ordering App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Smythe&display=swap" rel="stylesheet">
+        <script type="module" src="index.js"></script>
+    </head>
+    <body class="dark">
+        <div id="container">
+            <div id="header">
+                <header class="header">
+                    <h1>Sandy's Diner</h1>
+                    <p>The best burgers and pizzas in town</p>
+                </header>
+                <button id="theme-toggle">🌙</button>
+            </div>
+            <div id="menu"></div>
+            <div id="order" class="hidden">
+                <h2>Your Order</h2>
+                <div id="order-items" class="hidden"></div>
+                <hr class="divider">
+                <div id="order-total-container" class="hidden">
+                    <h3>Total Price: <span id="order-total">0</span></h3>
+                    <button id="complete-order-btn" data-complete="">Complete Order</button>
+                </div>
+            </div>
+            <div id="order-modal" class="modal hidden">
+                <div class="modal-content hidden">
+                    <span class="close-button" data-close="">&times;</span>
+                    <h2>Enter card details</h2>
+                    <form id="payment-form">
+                        <input type="text" id="card-name" class="input" name="card-name" placeholder="Enter your name" required >
+                        <input type="number" id="card-number" class="input" max-length="16" name="card-number" placeholder="Enter card number" required>
+                        <input type="number" id="cvv" class="input" name="cvv" max-length="4" placeholder="Enter CVV" required>
+                        <button id="pay-btn" type="submit">Pay</button>
+                    </form>
+                </div>
+            </div>
+            <div id="confirmation-message" class="hidden"></div>
+        </div>
+    </body>
+</html>
